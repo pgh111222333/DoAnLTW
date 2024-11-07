@@ -1,0 +1,11 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Jomhuria', cursive;
+}
+
+body {
+    background: url('../img/aboutus.jpg') lightgray 50% / cover no-repeat;
+    display: flex;
+    justify-content: center;
+}

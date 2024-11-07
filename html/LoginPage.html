@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col">
+                <div class="login-container">
+                    <div id="Login_Text">
+                        Login
+                    </div>
+                    <form class="input" method="POST">
+                        <div class="login-input">
+                            <input type="email" class="login-input" id="userEmail" aria-describedby="emailHelp" placeholder="Enter email/username" name="UsernameInput">
+                            <div class="line"></div>
+                        </div>
+                        <div class="login-input">
+                            <input type="password" class="login-input" id="userPassword" placeholder="Password" name="PasswordInput">
+                            <div class="line"></div>
+                        </div>
+                        <div class="forgotPassword">
+                            <a id="forgotPasswordLink" href="https://www.facebook.com/huy222s/" target="forgotPasswordLink">Forgotten password</a>
+                            <a id="registerLink" href="javascript:void(0);" onclick="openSignupPopup()">Register</a>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                        </div>
+                        <button type="submit" id="loginButton" class="btnLogin">Login</button>
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay nền mờ cho popup -->
+    <div class="overlay" id="overlay" onclick="closeSignupPopup()"></div>
+
+    <!-- Popup đăng ký -->
+    <div id="signup-popup-container">
+        <span class="close-btn" onclick="closeSignupPopup()">×</span>
+        <div class="signup-form-container">
+            <a id="register-title">Register</a>
+            <form id="signup-input">
+                
+                <div class="input">
+                    <label for="registerName" class="form-label">Name</label>
+                    <input type="name" class="form-control" id="registerName" placeholder="Enter your name" required>
+                </div>
+                <div class="input">
+                    <label for="registerEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="input">
+                    <label for="confirmPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="registerPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="signupButton">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/javascript/login.js"></script>
+</body>
+</html>
